@@ -1627,7 +1627,7 @@ class Securimage
                 require_once dirname(__FILE__) . '/WavFile.php';
                 $audio = $this->getAudibleCode();
 
-                if (strtolower($format) == 'mp3') {
+                if ($format !== null && strtolower($format) == 'mp3') {
                     $audio = $this->wavToMp3($audio);
                 }
 
