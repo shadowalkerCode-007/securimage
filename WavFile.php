@@ -1655,7 +1655,7 @@ class WavFile
 
         $filter_degrade = false;
         if (array_key_exists(self::FILTER_DEGRADE, $filters)) {
-            $degrade_quality = @$filters[self::FILTER_DEGRADE];
+            $degrade_quality = round(@$filters[self::FILTER_DEGRADE]);
             if (is_null($degrade_quality)) $degrade_quality = 1;
 
             if ($degrade_quality >= 0 && $degrade_quality < 1) $filter_degrade = true;
